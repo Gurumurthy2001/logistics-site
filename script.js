@@ -1,5 +1,12 @@
 function toggleMenu() {
   document.getElementById('nav-links').classList.toggle('show');
+
+  if (navLinks.classList.contains('show')) {
+    document.addEventListener('click', outsideClickListener);
+  } else {
+    document.removeEventListener('click', outsideClickListener);
+  }
+
 }
 
 
