@@ -3,19 +3,24 @@ function toggleMenu() {
   navLinks.classList.toggle('show');
 
   if (navLinks.classList.contains('show')) {
-    document.addEventListener('click', outsideClickListener);
+    setTimeout(() => {
+      document.addEventListener('click', outsideClickListener);
+      document.addEventListener('touchstart', outsideClickListener); // 👈 for mobile
+    }, 0);
   } else {
     document.removeEventListener('click', outsideClickListener);
+    document.removeEventListener('touchstart', outsideClickListener);
   }
 }
 
 function outsideClickListener(event) {
   const navLinks = document.getElementById('nav-links');
-  const toggleButton = document.querySelector('.menu-toggle'); // or use an ID if you prefer
+  const toggleButton = document.querySelector('.menu-toggle');
 
   if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
     navLinks.classList.remove('show');
     document.removeEventListener('click', outsideClickListener);
+    document.removeEventListener('touchstart', outsideClickListener);
   }
 }
 
