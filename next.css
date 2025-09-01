@@ -1,14 +1,18 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
 }
 
 header, footer {
   background-color: #003366;
   color: white;
+  display: flex;
   padding: 1rem;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 nav ul {
@@ -31,6 +35,7 @@ nav a {
 
 .sidebar {
   width: 25%;
+  order: 0;
   background-color: #f4f4f4;
   padding: 1rem;
 }
@@ -51,6 +56,7 @@ nav a {
 
 .content {
   width: 75%;
+  order: 1;
   padding: 2rem;
 }
 
@@ -154,14 +160,46 @@ nav a:hover {
 
 @media (max-width: 768px) {
   #nav-links {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 2px;
   }
 
   #nav-links li a {
     font-size: 14px;
     padding: 6px 10px;
   }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    order: -1; /* Moves sidebar to the top */
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .content {
+    order: 0;
+    width: 100%;
+  }
+
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .logo,
+  .menu-toggle,
+  nav {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+
 }
 
 nav i {
