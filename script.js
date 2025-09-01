@@ -1,13 +1,24 @@
 function toggleMenu() {
-  document.getElementById('nav-links').classList.toggle('show');
+  const navLinks = document.getElementById('nav-links');
+  navLinks.classList.toggle('show');
 
   if (navLinks.classList.contains('show')) {
     document.addEventListener('click', outsideClickListener);
   } else {
     document.removeEventListener('click', outsideClickListener);
   }
-
 }
+
+function outsideClickListener(event) {
+  const navLinks = document.getElementById('nav-links');
+  const toggleButton = document.querySelector('.menu-toggle'); // or use an ID if you prefer
+
+  if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
+    navLinks.classList.remove('show');
+    document.removeEventListener('click', outsideClickListener);
+  }
+}
+
 
 
 function showContent(sectionId) {
