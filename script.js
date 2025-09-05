@@ -1,6 +1,15 @@
 function toggleMenu() {
   const navLinks = document.getElementById('nav-links');
   navLinks.classList.toggle('show');
+  const navItems = navLinks.querySelectorAll('a');
+  navItems.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+      document.removeEventListener('click', outsideClickListener);
+      document.removeEventListener('touchstart', outsideClickListener);
+    });
+  });
+
 
   if (navLinks.classList.contains('show')) {
     setTimeout(() => {
