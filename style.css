@@ -56,7 +56,7 @@ nav a:hover {
 
 .menu-toggle {
   display: none;
-  font-size: 1rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 
@@ -159,7 +159,7 @@ nav a:hover {
     position: fixed;
     top: 100px;
     right: 0;
-    left: 250px;
+    left: 200px;
     width: 100px;
     display: none;
     padding: 1rem 1rem 1rem 1rem;
