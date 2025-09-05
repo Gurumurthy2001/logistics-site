@@ -7,12 +7,14 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
+<div class="header-wrapper">
   <header>
-    <div class="logo">
-      <img src="images/logistic_logo.png" alt="Guru Logistics Logo" />
+    <div class="header-top">
+      <div class="logo">
+        <img src="images/logistic_logo.png" alt="Guru Logistics Logo" />
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     </div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <nav>
       <ul id="nav-links">
         <li><a href="next.html?section=contact">Contact-Us</a></li>
@@ -25,10 +27,14 @@
       </ul>
     </nav>
   </header>
+</div>
+
 
   <main>
-    <div class="hero">
-      <img src="images/home page.png" alt="Logistics Hero Image" />
+    <div class="hero-wrapper">
+      <div class="hero">
+        <img src="images/home page.png" alt="Logistics Hero Image" />
+      </div>
     </div>
 
     <div class="content-section">
@@ -74,12 +80,18 @@
     <div class="gallery">
       <h2>Our Company in Action</h2>
       <div class="gallery-images">
-        <img src="images/logistic2.png" alt="Warehouse" />
-        <img src="images/logistic1.png" alt="Fleet" />
-        <img src="images/logistic3.png" alt="Team" />
-        <img src="images/logistic4.png" alt="Team" />
+        <div class="thumb"><img src="images/logistic2.png" alt="Warehouse" /></div>
+        <div class="thumb"><img src="images/logistic1.png" alt="Fleet" /></div>
+        <div class="thumb"><img src="images/logistic3.png" alt="Team" /></div>
+        <div class="thumb"><img src="images/logistic4.png" alt="Team" /></div>
+      </div>
+
+      <div class="modal" id="imageModal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg" />
       </div>
     </div>
+
   </main>
 
   <script src="script.js"></script>
@@ -92,8 +104,8 @@
       <div class="footer-info">
         <p><strong>VSK Logistics Pte. Ltd.</strong></p>
         <p>📍 1 North bridge Road#06-34 Singapore.</p>
-        <p>✉️ shagharaselva@gmail.com</p>
-        <p>✉️ Muhammad.zakiran84@gmail.com</p>
+            <a href="mailto:contact@vsk.com.sg?cc=shagharaselva@gmail.com">contact@vsk.com.sg</a><br />
+        📞: <a href="tel:91822436">91822436</a>, <a href="tel:96209901">96209901</a><br />
       </div>
       <div class="footer-links">
         <h4>Quick Links</h4>
