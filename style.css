@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
+  background: linear-gradient(to right, #003366, #0099cc, #92ec8f, #ffffff);
   line-height: 1.6;
   color: #333;
 }
@@ -15,13 +15,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:  1rem 1rem 0 1rem;
-  background-color: #b2b3b3;
+  padding:  1rem 1rem 0.3rem 1rem;
+  background: linear-gradient(to right, #b5a4fa, #f9fbfb, #bce7ba, #d8d0d0);
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 header {
-  background-color: rgb(188, 227, 251);
+  background: linear-gradient(to right, #85975b, #0099cc, #92ec8f, #9b9a9a);
   color: rgb(6, 5, 5);
   padding: 1rem 1rem 0 1rem;
   display: flex;
@@ -85,7 +85,7 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   padding: 2rem;
-  background-color: rgb(230, 229, 229);
+  background: linear-gradient(to right, #e4edd0, #9ec4d0, #bae5b8, #eacfcf);
   flex-wrap: wrap;
   gap: 2rem;
 }
